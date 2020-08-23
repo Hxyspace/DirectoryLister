@@ -1,0 +1,4 @@
+<!--本文件为公告栏代码-->
+		    <p><i class="fa fa-volume-down"></i>欢迎访问我的网站，
+			此网站已运行<?php echo ceil((time()-strtotime("2019-07-18"))/60/60/24); ?>天
+			</p>
