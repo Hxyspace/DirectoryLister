@@ -1,8 +1,5 @@
 <?php
 
-$password = "****";
-$webUrl = "http://127.0.0.1";
-
 return array(
 
     // 基本设置
@@ -11,7 +8,8 @@ return array(
     'list_sort_order'           => 'natcasesort',
     'theme_name'                => 'bootstrap',
     'external_links_new_window' => true,
-	'password'                  => $password,
+	'password'                  => '****',
+	'webUrl'                    => 'http://127.0.0.1',
 
     // 隐藏文件
     'hidden_files' => array(

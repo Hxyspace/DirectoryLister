@@ -6,6 +6,11 @@
     // Initialize the DirectoryLister object
     $lister = new DirectoryLister();
 
+	if($_GET['password'] != $lister->getPassword()){
+		echo '<center>内部机密，闲人免进！</center>';
+		exit;
+	}
+
     // Restrict access to current directory
     ini_set('open_basedir', getcwd());
 

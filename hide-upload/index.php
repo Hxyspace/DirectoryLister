@@ -1,6 +1,6 @@
 <?php
 
-require_once('server/upload/resources/config.php');
+$config = require_once('server/upload/resources/config.php');
 
 function getDnyPwd() {
 	$date = getdate();
@@ -12,8 +12,8 @@ if($_GET['user']== "admin") {
 
 	$tips = "";
 
-	if($_POST['pass']==$password || $_POST['pass']==getDnyPwd()){
-		$url = $webUrl . '/hide-upload/server/upload/api.php';
+	if($_POST['pass']==$config['password'] || $_POST['pass']==getDnyPwd()){
+		$url = $config['webUrl'] . '/hide-upload/server/upload/api.php?password=' . $config['password'];
 		if($_POST['del'] != null){
 			if(unlink("server/upload/" . $_POST['del'])){ $tips = '<script>$(window).load(function() {alert("成功删除！");})</script>'; }
 			else { $tips = '<script>$(window).load(function() {alert("删除失败，未知错误！");})</script>'; }
